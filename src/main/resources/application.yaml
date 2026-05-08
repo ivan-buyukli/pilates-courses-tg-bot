@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: telegram-bot
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+
+telegram:
+  bot-token: ${TELEGRAM_BOT_TOKEN}
+  trigger-message: "Get a free gift"
+  hello-message: "Hello"
+  max-reminders: 3
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
