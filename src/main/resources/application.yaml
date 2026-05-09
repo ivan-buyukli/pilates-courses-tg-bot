@@ -16,8 +16,7 @@ spring:
 
 telegram:
   bot-token: ${TELEGRAM_BOT_TOKEN}
-  trigger-message: "Get a free gift"
-  hello-message: "Hello"
+  hello-message: "Hi, how's your day? Ready for some pilates? Choose one of the options below to get started!"
   max-reminders: 3
 
 management:

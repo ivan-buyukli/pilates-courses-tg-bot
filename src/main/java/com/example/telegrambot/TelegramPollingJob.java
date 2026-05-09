@@ -14,7 +14,6 @@ public class TelegramPollingJob {
 
     private final TelegramClient telegramClient;
     private final UserReminderRepository repository;
-    private final String triggerMessage;
     private final String helloMessage;
 
     private Long lastProcessedUpdateId;
@@ -22,12 +21,10 @@ public class TelegramPollingJob {
     public TelegramPollingJob(
             TelegramClient telegramClient,
             UserReminderRepository repository,
-            @Value("${telegram.trigger-message}") String triggerMessage,
             @Value("${telegram.hello-message}") String helloMessage
     ) {
         this.telegramClient = telegramClient;
         this.repository = repository;
-        this.triggerMessage = triggerMessage;
         this.helloMessage = helloMessage;
     }
 
@@ -48,14 +45,16 @@ public class TelegramPollingJob {
             }
 
             String text = (String) message.get("text");
-            if (!triggerMessage.equalsIgnoreCase(text)) {
+            if (!"/start".equalsIgnoreCase(text)) {
                 continue;
             }
 
             Map<String, Object> chat = (Map<String, Object>) message.get("chat");
+            Long messageId = ((Number) message.get("message_id")).longValue();
             Long chatId = ((Number) chat.get("id")).longValue();
 
-            telegramClient.sendMessage(chatId, helloMessage);
+            telegramClient.deleteMessage(chatId, messageId);
+            telegramClient.sendMessageWithMainKeyboard(chatId, helloMessage);
 
             UserReminder reminder = repository.findById(chatId).orElseGet(UserReminder::new);
             reminder.setChatId(chatId);

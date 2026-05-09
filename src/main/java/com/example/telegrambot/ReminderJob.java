@@ -37,7 +37,7 @@ public class ReminderJob {
                 );
 
         for (UserReminder reminder : reminders) {
-            telegramClient.sendMessage(reminder.getChatId(), helloMessage);
+            telegramClient.sendMessageWithMainKeyboard(reminder.getChatId(), helloMessage);;
 
             int newCount = reminder.getSentCount() + 1;
             reminder.setSentCount(newCount);
