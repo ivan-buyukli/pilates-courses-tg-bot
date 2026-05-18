@@ -1,6 +1,6 @@
 spring:
   application:
-    name: telegram-bot
+    name: neurofit-bot
   datasource:
     url: ${SPRING_DATASOURCE_URL}
     username: ${SPRING_DATASOURCE_USERNAME}
@@ -15,9 +15,9 @@ spring:
     baseline-on-migrate: true
 
 telegram:
-  bot-token: ${TELEGRAM_BOT_TOKEN}
-  hello-message: "Hi, how's your day? Ready for some pilates? Choose one of the options below to get started!"
-  max-reminders: 3
+  bot-neurofit:
+    token: ${TELEGRAM_BOT_TOKEN}
+    username: ${TELEGRAM_BOT_USERNAME}
 
 management:
   endpoints:
