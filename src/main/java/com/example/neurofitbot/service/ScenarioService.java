@@ -68,14 +68,16 @@ public class ScenarioService {
             new Plan(MessageCode.NF_STAY_IN_BOT, base -> base.plusMinutes(3)),
             new Plan(MessageCode.NF_WHAT_IS_NEUROFIT, base -> base.plusDays(1).withHour(7).withMinute(0)),
             new Plan(MessageCode.NF_NERVOUS_SYSTEM_RELOAD, base -> base.plusDays(1).withHour(13).withMinute(0)),
-            new Plan(MessageCode.NF_WHY_CREATE_NEUROFIT_VOICE, base -> base.plusDays(2).withHour(7).withMinute(0)),
+            new Plan(MessageCode.NF_WHY_CREATE_NEUROFIT_PHOTO, base -> base.plusDays(2).withHour(7).withMinute(0)),
             new Plan(MessageCode.NF_WHY_CREATE_NEUROFIT, base -> base.plusDays(2).withHour(7).withMinute(0).withSecond(1)),
             new Plan(MessageCode.NF_EXERCISE_WITH_BALL, base -> base.plusDays(2).withHour(13).withMinute(0)),
-            new Plan(MessageCode.NF_PROGRAM_CONTENT, base -> base.plusDays(3).withHour(7).withMinute(0)),
+            new Plan(MessageCode.NF_PROGRAM_CONTENT_PHOTO, base -> base.plusDays(3).withHour(7).withMinute(0)),
+            new Plan(MessageCode.NF_PROGRAM_CONTENT, base -> base.plusDays(3).withHour(7).withMinute(0).withSecond(1)),
             new Plan(MessageCode.NF_RESULTS_FEEDBACK, base -> base.plusDays(3).withHour(13).withMinute(0)),
             new Plan(MessageCode.NF_PROMOCODE_OFFER_PHOTO, base -> base.plusDays(4).withHour(7).withMinute(0)),
             new Plan(MessageCode.NF_PROMOCODE_OFFER, base -> base.plusDays(4).withHour(7).withMinute(0).withSecond(1)),
-            new Plan(MessageCode.NF_PROMOCODE_REMINDER, base -> base.plusDays(5).withHour(7).withMinute(0))
+            new Plan(MessageCode.NF_PROMOCODE_REMINDER_PHOTO, base -> base.plusDays(5).withHour(7).withMinute(0)),
+            new Plan(MessageCode.NF_PROMOCODE_REMINDER, base -> base.plusDays(5).withHour(7).withMinute(0).withSecond(1))
     );
 
     private void schedule(BotUser user, MessageCode messageCode, LocalDateTime scheduledAt) {

@@ -16,6 +16,7 @@ insert into prepared_messages (
     code,
     title,
     text_before,
+    media_type,
     telegram_file_id,
     text_after,
     button_text,
@@ -34,7 +35,8 @@ $$
 • Швидкість реакції та обробки інформації.
 
 🎁 Твій подарунок тут:
-$$, null, null, 'Забрати подарунок', 'CALLBACK', 'ВІДЕО КООРДИНАЦІЯ');
+$$,
+'NONE', null, null, 'Забрати подарунок', 'CALLBACK', 'ВІДЕО КООРДИНАЦІЯ');
 
 insert into prepared_messages (
     code,
@@ -58,22 +60,27 @@ $$
 Бо потенціал у цього напрямку - величезний. Розпочинай і ти!
 $$,
 'VIDEO',
-'BQACAgIAAyEFAATTxwaAAAMDagr2FRYhLP4H5R5hz8d9P-ghU3gAAmaaAAJ3bTFIMa1ObeB44Mk7BA');
-
-insert into prepared_messages (
-    code,
-    title,
-    text_before
-)
-values (
-'NF_STAY_IN_BOT',
-'Stay in bot',
-'Залишайся в боті, бо протягом кількох днів я буду надсилати тобі корисні вправи, міні-практики та матеріали, які допоможуть краще зрозуміти свій стан і познайомитися з методом NeuroFit 💫');
+'BQACAgIAAyEFAATTxwaAAAMDagr2FRYhLP4H5R5hz8d9P-ghU3gAAmaaAAJ3bTFIMa1ObeB44Mk7BA'
+       );
 
 insert into prepared_messages (
     code,
     title,
     text_before,
+    media_type
+)
+values (
+'NF_STAY_IN_BOT',
+'Stay in bot',
+'Залишайся в боті, бо протягом кількох днів я буду надсилати тобі корисні вправи, міні-практики та матеріали, які допоможуть краще зрозуміти свій стан і познайомитися з методом NeuroFit 💫',
+'NONE'
+       );
+
+insert into prepared_messages (
+    code,
+    title,
+    text_before,
+    media_type,
     telegram_file_id,
     text_after,
     button_text,
@@ -97,7 +104,9 @@ $$
 
 Коли мозок і тіло працюють злагоджено, то рухи стають
 легшими, а тіло менш напруженим!
-$$, null, null, 'Отримати відео', 'CALLBACK', 'ВІДЕО ДЛЯ ОЧЕЙ');
+$$,
+'NONE', null, null, 'Отримати відео', 'CALLBACK', 'ВІДЕО ДЛЯ ОЧЕЙ'
+       );
 
 insert into prepared_messages (
     code,
@@ -118,6 +127,7 @@ insert into prepared_messages (
     code,
     title,
     text_before,
+    media_type,
     telegram_file_id,
     text_after,
     button_text,
@@ -146,7 +156,9 @@ $$
 психологині і йогині, що в комплексі дає значний прогрес.
 
 Спробуй сьогодні 👇
-$$, null, null, 'Отримати відео', 'CALLBACK', 'ВІДЕО ДИХАННЯ');
+$$,
+'NONE', null, null, 'Отримати відео', 'CALLBACK', 'ВІДЕО ДИХАННЯ'
+       );
 
 insert into prepared_messages (
     code,
@@ -175,8 +187,8 @@ values (
 'NF_WHY_CREATE_NEUROFIT',
 'Why create NeuroFit',
 'Чому я створила NeuroFit?',
-'PHOTO',
-'AgACAgQAAyEFAATTxwaAAAMhaguLjG2JvnOR7Ux0PZNwCoeW0HYAAsMPaxviOFlQQCR-oH_bYdQBAAMCAAN5AAM7BA',
+'VOICE',
+'AwACAgIAAyEFAATTxwaAAAMNagr6RW7YKJV-jjG5BT8iI9wVxRAAAgmhAAIMMzBIfdhxOHKlGyw7BA',
 null
        );
 
@@ -187,10 +199,10 @@ insert into prepared_messages (
     telegram_file_id
 )
 values (
-'NF_WHY_CREATE_NEUROFIT_VOICE',
-'Why create NeuroFit voice',
-'VOICE',
-'AwACAgIAAyEFAATTxwaAAAMNagr6RW7YKJV-jjG5BT8iI9wVxRAAAgmhAAIMMzBIfdhxOHKlGyw7BA'
+'NF_WHY_CREATE_NEUROFIT_PHOTO',
+'Why create NeuroFit photo',
+'PHOTO',
+'AgACAgQAAyEFAATTxwaAAAMhaguLjG2JvnOR7Ux0PZNwCoeW0HYAAsMPaxviOFlQQCR-oH_bYdQBAAMCAAN5AAM7BA'
        );
 
 insert into prepared_messages (
@@ -239,13 +251,24 @@ $$
 • легкість руху
 • відчуття тіла
 • рівень напруги
-$$);
+$$
+       );
 
 insert into prepared_messages (
     code,
     title,
     media_type,
-    telegram_file_id,
+    telegram_file_id
+)
+values (
+'NF_PROGRAM_CONTENT_PHOTO',
+'Program content',
+'PHOTO',
+'AgACAgQAAyEFAATTxwaAAAMRagr6ZNP6iqgZhY_Q_knOe5iUgTYAAkQPaxviOFlQtk0HYPCjvTkBAAMCAAN4AAM7BA');
+
+insert into prepared_messages (
+    code,
+    title,
     text_after,
     button_text,
     button_type,
@@ -254,8 +277,6 @@ insert into prepared_messages (
 values (
 'NF_PROGRAM_CONTENT',
 'Program content',
-'PHOTO',
-'AgACAgQAAyEFAATTxwaAAAMRagr6ZNP6iqgZhY_Q_knOe5iUgTYAAkQPaxviOFlQtk0HYPCjvTkBAAMCAAN4AAM7BA',
 $$
 Що всередині NeuroFit:
 
@@ -349,7 +370,18 @@ insert into prepared_messages (
     code,
     title,
     media_type,
-    telegram_file_id,
+    telegram_file_id
+)
+values (
+'NF_PROMOCODE_REMINDER_PHOTO',
+'Promocode reminder photo',
+'PHOTO',
+'AgACAgQAAyEFAATTxwaAAAMXagr6pRDtf_fSz4V1hwABCdH0UGQLAAJGD2sb4jhZUE3ozDCosMjtAQADAgADeQADOwQ'
+       );
+
+insert into prepared_messages (
+    code,
+    title,
     text_after,
     button_text,
     button_type,
@@ -358,8 +390,6 @@ insert into prepared_messages (
 values (
 'NF_PROMOCODE_REMINDER',
 'Promocode reminder',
-'PHOTO',
-'AgACAgQAAyEFAATTxwaAAAMXagr6pRDtf_fSz4V1hwABCdH0UGQLAAJGD2sb4jhZUE3ozDCosMjtAQADAgADeQADOwQ',
 $$
 Нагадую 💗
 Твій промокод на програму NeuroFit діє лише до завтра ✨
