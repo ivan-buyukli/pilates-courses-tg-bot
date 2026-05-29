@@ -190,7 +190,7 @@ values (
 'NF_WHY_CREATE_NEUROFIT_VOICE',
 'Why create NeuroFit voice',
 'VOICE',
-'AwACAgIAAyEFAATTxwaAAAMNagr6RW7YKJV-jjG5BT8iI9wVxRAAAgmhAAIMMzBIfdhxOHKlGyw7BA'
+'AwACAgIAAyEFAATTxwaAAAMpahl4euBptyXT06iQ1vgB3CfiVFcAAgmhAAIMMzBI81U1b3-Uz3c7BA'
        );
 
 insert into prepared_messages (
@@ -255,7 +255,7 @@ values (
 'NF_PROGRAM_CONTENT',
 'Program content',
 'PHOTO',
-'AgACAgQAAyEFAATTxwaAAAMRagr6ZNP6iqgZhY_Q_knOe5iUgTYAAkQPaxviOFlQtk0HYPCjvTkBAAMCAAN4AAM7BA',
+'AgACAgQAAyEFAATTxwaAAAMrahl5RCS4XjqdxJXR4SzXO0X9j5AAArINaxt2HshQIS_OTcLrdN8BAAMCAAN4AAM7BA',
 $$
 Що всередині NeuroFit:
 
@@ -311,17 +311,7 @@ insert into prepared_messages (
     code,
     title,
     media_type,
-    telegram_file_id
-)
-values (
-'NF_PROMOCODE_OFFER_PHOTO',
-'Promocode offer photo',
-'PHOTO',
-'AgACAgQAAyEFAATTxwaAAAMVagr6jzS-_HQm3-vf70Nb7lm2FqMAAkUPaxviOFlQo7JbKJo_OrQBAAMCAAN5AAM7BA');
-
-insert into prepared_messages (
-    code,
-    title,
+    telegram_file_id,
     text_after,
     button_text,
     button_type,
@@ -330,6 +320,8 @@ insert into prepared_messages (
 values (
 'NF_PROMOCODE_OFFER',
 'Promocode offer',
+'PHOTO',
+'AgACAgQAAyEFAATTxwaAAAMVagr6jzS-_HQm3-vf70Nb7lm2FqMAAkUPaxviOFlQo7JbKJo_OrQBAAMCAAN5AAM7BA',
 $$
 За ці дні ти вже трохи познайомилась із системою NeuroFit 💗
 
@@ -359,7 +351,7 @@ values (
 'NF_PROMOCODE_REMINDER',
 'Promocode reminder',
 'PHOTO',
-'AgACAgQAAyEFAATTxwaAAAMXagr6pRDtf_fSz4V1hwABCdH0UGQLAAJGD2sb4jhZUE3ozDCosMjtAQADAgADeQADOwQ',
+'AgACAgQAAyEFAATTxwaAAAMtahl6ff9YCKO1GoLqkwrIs23UduMAArQNaxt2HshQp8P1lZ3-un4BAAMCAAN5AAM7BA',
 $$
 Нагадую 💗
 Твій промокод на програму NeuroFit діє лише до завтра ✨
