@@ -20,7 +20,7 @@ public enum MessageCode {
 
     NF_WHY_CREATE_NEUROFIT("Why Neurofit created?"),
 
-    NF_WHY_CREATE_NEUROFIT_PHOTO("Why Neurofit created photo"),
+    NF_WHY_CREATE_NEUROFIT_VOICE("Why Neurofit created voice"),
 
     NF_EXERCISE_WITH_BALL("Exercises with a ball"),
 
@@ -28,17 +28,13 @@ public enum MessageCode {
 
     NF_PROGRAM_CONTENT("NeuroFit program content overview"),
 
-    NF_PROGRAM_CONTENT_PHOTO("NeuroFit program content overview photo"),
-
     NF_RESULTS_FEEDBACK("Client feedback and results"),
 
     NF_PROMOCODE_OFFER("Promo code offer message"),
 
     NF_PROMOCODE_OFFER_PHOTO("Promo code offer photo"),
 
-    NF_PROMOCODE_REMINDER("Promo code reminder"),
-
-    NF_PROMOCODE_REMINDER_PHOTO("Promo code reminder photo");
+    NF_PROMOCODE_REMINDER("Promo code reminder");
 
     private final String description;
 
