@@ -32,6 +32,8 @@ public enum MessageCode {
 
     NF_PROMOCODE_OFFER("Promo code offer message"),
 
+    NF_PROMOCODE_OFFER_PHOTO("Promo code offer photo"),
+
     NF_PROMOCODE_REMINDER("Promo code reminder");
 
     private final String description;

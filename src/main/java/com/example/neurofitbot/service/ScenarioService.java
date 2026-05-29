@@ -73,7 +73,8 @@ public class ScenarioService {
             new Plan(MessageCode.NF_EXERCISE_WITH_BALL, base -> base.plusDays(2).withHour(13).withMinute(0)),
             new Plan(MessageCode.NF_PROGRAM_CONTENT, base -> base.plusDays(3).withHour(7).withMinute(0)),
             new Plan(MessageCode.NF_RESULTS_FEEDBACK, base -> base.plusDays(3).withHour(13).withMinute(0)),
-            new Plan(MessageCode.NF_PROMOCODE_OFFER, base -> base.plusDays(4).withHour(7).withMinute(0)),
+            new Plan(MessageCode.NF_PROMOCODE_OFFER_PHOTO, base -> base.plusDays(4).withHour(7).withMinute(0)),
+            new Plan(MessageCode.NF_PROMOCODE_OFFER, base -> base.plusDays(4).withHour(7).withMinute(0).withSecond(1)),
             new Plan(MessageCode.NF_PROMOCODE_REMINDER, base -> base.plusDays(5).withHour(7).withMinute(0))
     );
 
