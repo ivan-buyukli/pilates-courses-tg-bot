@@ -16,7 +16,6 @@ insert into prepared_messages (
     code,
     title,
     text_before,
-    media_type,
     telegram_file_id,
     text_after,
     button_text,
@@ -35,8 +34,7 @@ $$
 • Швидкість реакції та обробки інформації.
 
 🎁 Твій подарунок тут:
-$$,
-'NONE', null, null, 'Забрати подарунок', 'CALLBACK', 'ВІДЕО КООРДИНАЦІЯ');
+$$, null, null, 'Забрати подарунок', 'CALLBACK', 'ВІДЕО КООРДИНАЦІЯ');
 
 insert into prepared_messages (
     code,
@@ -66,21 +64,17 @@ $$,
 insert into prepared_messages (
     code,
     title,
-    text_before,
-    media_type
+    text_before
 )
 values (
 'NF_STAY_IN_BOT',
 'Stay in bot',
-'Залишайся в боті, бо протягом кількох днів я буду надсилати тобі корисні вправи, міні-практики та матеріали, які допоможуть краще зрозуміти свій стан і познайомитися з методом NeuroFit 💫',
-'NONE'
-       );
+'Залишайся в боті, бо протягом кількох днів я буду надсилати тобі корисні вправи, міні-практики та матеріали, які допоможуть краще зрозуміти свій стан і познайомитися з методом NeuroFit 💫');
 
 insert into prepared_messages (
     code,
     title,
     text_before,
-    media_type,
     telegram_file_id,
     text_after,
     button_text,
@@ -104,8 +98,7 @@ $$
 
 Коли мозок і тіло працюють злагоджено, то рухи стають
 легшими, а тіло менш напруженим!
-$$,
-'NONE', null, null, 'Отримати відео', 'CALLBACK', 'ВІДЕО ДЛЯ ОЧЕЙ'
+$$, null, null, 'Отримати відео', 'CALLBACK', 'ВІДЕО ДЛЯ ОЧЕЙ'
        );
 
 insert into prepared_messages (
@@ -127,7 +120,6 @@ insert into prepared_messages (
     code,
     title,
     text_before,
-    media_type,
     telegram_file_id,
     text_after,
     button_text,
@@ -156,8 +148,7 @@ $$
 психологині і йогині, що в комплексі дає значний прогрес.
 
 Спробуй сьогодні 👇
-$$,
-'NONE', null, null, 'Отримати відео', 'CALLBACK', 'ВІДЕО ДИХАННЯ'
+$$, null, null, 'Отримати відео', 'CALLBACK', 'ВІДЕО ДИХАННЯ'
        );
 
 insert into prepared_messages (
@@ -188,7 +179,7 @@ values (
 'Why create NeuroFit',
 'Чому я створила NeuroFit?',
 'VOICE',
-'AwACAgIAAyEFAATTxwaAAAMNagr6RW7YKJV-jjG5BT8iI9wVxRAAAgmhAAIMMzBIfdhxOHKlGyw7BA',
+'AwACAgIAAyEFAATTxwaAAAMpahl4euBptyXT06iQ1vgB3CfiVFcAAgmhAAIMMzBI81U1b3-Uz3c7BA',
 null
        );
 
@@ -264,7 +255,7 @@ values (
 'NF_PROGRAM_CONTENT_PHOTO',
 'Program content',
 'PHOTO',
-'AgACAgQAAyEFAATTxwaAAAMRagr6ZNP6iqgZhY_Q_knOe5iUgTYAAkQPaxviOFlQtk0HYPCjvTkBAAMCAAN4AAM7BA');
+'AgACAgQAAyEFAATTxwaAAAMrahl5RCS4XjqdxJXR4SzXO0X9j5AAArINaxt2HshQIS_OTcLrdN8BAAMCAAN4AAM7BA');
 
 insert into prepared_messages (
     code,
@@ -376,7 +367,7 @@ values (
 'NF_PROMOCODE_REMINDER_PHOTO',
 'Promocode reminder photo',
 'PHOTO',
-'AgACAgQAAyEFAATTxwaAAAMXagr6pRDtf_fSz4V1hwABCdH0UGQLAAJGD2sb4jhZUE3ozDCosMjtAQADAgADeQADOwQ'
+'AgACAgQAAyEFAATTxwaAAAMtahl6ff9YCKO1GoLqkwrIs23UduMAArQNaxt2HshQp8P1lZ3-un4BAAMCAAN5AAM7BA'
        );
 
 insert into prepared_messages (
