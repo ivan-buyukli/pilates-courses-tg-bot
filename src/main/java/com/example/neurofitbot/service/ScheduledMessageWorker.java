@@ -27,7 +27,7 @@ public class ScheduledMessageWorker {
         this.bot = bot;
     }
 
-    @Scheduled(fixedDelay = 1_000)
+    @Scheduled(fixedDelay = 3_000)
     public void sendPendingMessages() {
         List<ScheduledMessage> messages =
                 scheduledMessageRepository

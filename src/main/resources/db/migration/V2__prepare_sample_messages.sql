@@ -316,7 +316,7 @@ $$
 втомленим!
 $$,
 'VIDEO',
-'BQACAgIAAyEFAATTxwaAAAMTagr6dMqGl-eeiLxv5k-t935OsKwAAkmbAAJ3bTFIJVNGi4Vhgc87BA'
+'BAACAgQAAyEFAATTxwaAAAMvaiWEToXUTLHOamKF4lzMxNB6jm4AAisfAAIKqihRbqk66GDXtKs7BA'
        );
 
 insert into prepared_messages (
@@ -347,7 +347,7 @@ $$
 
 Але в програмі ми повноцінно тренуємось, не тільки виконуємо
 окремі вправи! І щоб тобі було легше почати - я підготувала
-<b>спеціальний ПРОМОКОД на участь</b> 🎁
+<b>спеціальний ПРОМОКОД на участь -20%</b> 🎁
 
 <b>Промокод: NEURO88</b>
 (знижка діє 48 годин)
