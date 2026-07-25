@@ -8,8 +8,7 @@ import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
-import static com.example.neurofitbot.common.ReplyButtonConstants.CONTACT_ME;
-import static com.example.neurofitbot.common.ReplyButtonConstants.JOIN_THE_COURSE;
+import static com.example.neurofitbot.common.ReplyButtonConstants.*;
 
 @Component
 public class NeurofitTelegramBot extends TelegramLongPollingBot {
@@ -78,6 +77,13 @@ public class NeurofitTelegramBot extends TelegramLongPollingBot {
             }
         } catch (Exception e) {
             log.error("Error while sending join the course message to user {}: {}", user.getTelegramUserId(), e.getMessage());
+        }
+        try {
+            if (SEE_OTHER_COURSES.equals(text)) {
+                messageSenderService.onSeeOtherCoursesButton(this, update.getMessage().getChatId());
+            }
+        } catch (Exception e) {
+            log.error("Error while sending see other courses message to user {}: {}", user.getTelegramUserId(), e.getMessage());
         }
     }
 

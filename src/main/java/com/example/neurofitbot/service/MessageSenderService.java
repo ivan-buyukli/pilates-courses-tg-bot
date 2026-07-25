@@ -4,7 +4,6 @@ import com.example.neurofitbot.common.ButtonType;
 import com.example.neurofitbot.common.MediaType;
 import com.example.neurofitbot.common.MessageCode;
 import com.example.neurofitbot.message.PreparedMessage;
-import com.example.neurofitbot.user.BotUser;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
@@ -19,8 +18,7 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.Keyboard
 
 import java.util.List;
 
-import static com.example.neurofitbot.common.ReplyButtonConstants.CONTACT_ME;
-import static com.example.neurofitbot.common.ReplyButtonConstants.JOIN_THE_COURSE;
+import static com.example.neurofitbot.common.ReplyButtonConstants.*;
 
 @Service
 public class MessageSenderService {
@@ -74,6 +72,15 @@ public class MessageSenderService {
                 .text("Дізнайся детальніше про курс за посиланням нижче!")
                 .parseMode("HTML")
                 .replyMarkup(buildURLButton("Дізнатися про курс", "https://butenkofit.com/neurofit"))
+                .build());
+    }
+
+    public void onSeeOtherCoursesButton(TelegramLongPollingBot bot, Long chatId) throws Exception {
+        bot.execute(SendMessage.builder()
+                .chatId(chatId)
+                .text("Дізнайся про інші програми!")
+                .parseMode("HTML")
+                .replyMarkup(buildURLButton("Дивитися інші програми", "https://butenkofit.com/"))
                 .build());
     }
 
@@ -138,14 +145,18 @@ public class MessageSenderService {
     }
 
     private ReplyKeyboardMarkup buildHotKeyboardButtons() {
-        KeyboardRow row = new KeyboardRow();
-        row.add(CONTACT_ME);
-        row.add(JOIN_THE_COURSE);
+        KeyboardRow row1 = new KeyboardRow();
+        row1.add(CONTACT_ME);
+        row1.add(JOIN_THE_COURSE);
+
+        KeyboardRow row2 = new KeyboardRow();
+        row2.add(SEE_OTHER_COURSES);
+
 
         return ReplyKeyboardMarkup.builder()
                 .resizeKeyboard(true)
                 .oneTimeKeyboard(false)
-                .keyboard(List.of(row))
+                .keyboard(List.of(row1, row2))
                 .build();
 
     }

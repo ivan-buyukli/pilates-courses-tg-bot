@@ -58,18 +58,22 @@ $$
 Бо потенціал у цього напрямку - величезний. Розпочинай і ти!
 $$,
 'VIDEO',
-'BQACAgIAAyEFAATTxwaAAAMDagr2FRYhLP4H5R5hz8d9P-ghU3gAAmaaAAJ3bTFIMa1ObeB44Mk7BA'
+'BAACAgQAAyEFAATTxwaAAAMzamS4r7Ag7erCE-hxTfX2bwpJEF0AAlYiAAIlSShTJKncHpHQc2c9BA'
        );
 
 insert into prepared_messages (
     code,
     title,
-    text_before
+    media_type,
+    telegram_file_id,
+    text_after
 )
 values (
 'NF_STAY_IN_BOT',
 'Stay in bot',
-'Залишайся в боті, бо протягом кількох днів я буду надсилати тобі корисні вправи, міні-практики та матеріали, які допоможуть краще зрозуміти свій стан і познайомитися з методом NeuroFit 💫');
+        'PHOTO',
+        'AgACAgQAAyEFAATTxwaAAAM7amS_grb9oNQ7_T6y58qHMTYPiC8AAjwNaxvHiCBTCt05ve9MfSgBAAMCAANzAAM9BA',
+'А поки давай перевіримо підписку в [Instagram](https://www.instagram.com/juli.butenko.fit?igsh=NjRldDl1a3NweHBs&utm_source=qr), щоб залишатися на зв’язку 💜 Залишайся в боті, бо протягом кількох днів я буду надсилати тобі корисні вправи, міні-практики та матеріали, які допоможуть краще зрозуміти свій стан і познайомитися з методом NeuroFit 💫');
 
 insert into prepared_messages (
     code,
@@ -113,7 +117,7 @@ values (
 'What is NeuroFit video',
 null,
 'VIDEO',
-'BQACAgIAAyEFAATTxwaAAAMEagr4yHggKya0-ZlEBcDC1H85JV8AAnuaAAJ3bTFIgCoN_QABkjdlOwQ'
+'BAACAgQAAyEFAATTxwaAAAM1amS5FUkkIIbLpJxlOVQE-dEhi88AAtYhAALHiCBTL6FzoBuYmx89BA'
        );
 
 insert into prepared_messages (
@@ -163,7 +167,7 @@ values (
 'Nervous system reload video',
 null,
 'VIDEO',
-'BQACAgIAAyEFAATTxwaAAAMJagr6NQABNLkrRCRcE3cedqsBhUCWAAKnmgACd20xSFbF0AltCSaPOwQ'
+'BAACAgQAAyEFAATTxwaAAAM3amS5wISfOqxYvGDTMSNOILdeprcAAtchAALHiCBTu9c2JaHkWQg9BA'
        );
 
 insert into prepared_messages (
@@ -232,7 +236,7 @@ values (
 'Exercise with ball video',
 null,
 'VIDEO',
-'BQACAgIAAyEFAATTxwaAAAMPagr6TDDH3pkWP2-xtgvCUWfG4k8AAgybAAJ3bTFI_fbU7PyW3Vo7BA',
+'BAACAgQAAyEFAATTxwaAAAM5amS9BSFe1MZhZCBZZW_NpYYWly8AAuIhAALHiCBTmRrsa09Ki5U9BA',
 $$
 І після - ще раз відчуй своє тіло 💗
 
